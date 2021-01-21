@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>sprite</title>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <Script src="physi.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="dot"></div>
+   <div id="tip" style="position:absolute;top:1%;left:1%;opacity:.7;font-family:arial;background-color:lightgray;border-radius:5px;height:100px;width:300px;z-index:2;"><div style="padding:8px;">Use W/A/S/D and Space to move, press E to make a beverage, and Q to enter the car.</div></div>
+   <div id="overlay" style="position:absolute;top:0;left:0;font-family:arial;background-image:url(background.png);background-size:cover;height:100%;width:100%;overflow:hidden;z-index:2;">
+     <div id="loadercontent" style="position:absolute;height:150px;width:300px;left:calc(50% - 150px);top:calc(50% - 150px);background-color:gray;border-radius:5px;">
+       <div style="padding:8px;margin:8px;">
+       <H1 style="color:black;">Loading models..</H1>
+   <div id="loaderouter" style="height:20px;width:270px;background-color:gray;overflow:hidden;">
+     <div id="loader" style="height:20px;width:0%;background-image:url('spritelogogreen.png');background-size:20px 20px;"></div>
+     </div>
+     </div>
+     </div>
+     </div>
+     
+    <script src="script.js" type="module"></script>
+    
+  </body>
+</html>

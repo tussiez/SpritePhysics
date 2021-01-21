@@ -1,0 +1,22 @@
+body{
+  height:100%;
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
+html{
+  height:100%;
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
+#dot{
+  position: absolute;
+  top:calc(50% - 2.5px);
+  left:calc(50% - 2.5px);
+  height:5px;
+  width:5px;
+  border-radius:50%;
+  background-color:black;
+  z-index:2;
+}

@@ -1,0 +1,123 @@
+  /*
+  var wheelGeometry = new THREE.CylinderBufferGeometry(.5,.5,.5,20,32);//cylinder wheel
+  var wheelMaterial = Physijs.createMaterial(
+    new THREE.MeshLambertMaterial({map:spriteCranberryLogo}),
+    .8,
+    .5,
+  );
+  var carMaterial = Physijs.createMaterial(
+    new THREE.MeshPhongMaterial({map:spriteCranberryLogo}),
+    .8,//Friction
+    .2//Resitution or something,bounce back amount
+  )
+  var wheels = {//create wheel objects
+    rear:{
+      left: new Physijs.CylinderMesh(wheelGeometry,wheelMaterial,50),
+      right: new Physijs.CylinderMesh(wheelGeometry,wheelMaterial,50),
+    },
+    front:{
+      left: new Physijs.CylinderMesh(wheelGeometry,wheelMaterial,50),
+      right: new Physijs.CylinderMesh(wheelGeometry,wheelMaterial,50),
+      
+    }
+  }
+  var car =  {//car obj
+    body: new Physijs.BoxMesh(new THREE.BoxBufferGeometry(4,2,2),carMaterial,500),//car box
+    wheels:wheels,//set wheels
+  }
+  //WOW WTH I JUST SPEND THIRTY MINUTES JUST TO REALIZE I WAS SUPPOSED TO ADD THIS TO SCENE EARLIER 
+  scene.add(car.body)
+  //cast and receive shadows
+  car.wheels.rear.left.castShadow = true;
+  car.wheels.rear.right.castShadow = true;
+  car.wheels.rear.left.receiveShadow = true;
+  car.wheels.rear.right.receiveShadow = true;
+  car.wheels.front.left.castShadow = true;
+  car.wheels.front.right.castShadow = true;
+  car.wheels.front.left.receiveShadow = true;
+  car.wheels.front.right.receiveShadow = true;
+  car.body.castShadow = true;
+  car.body.receiveShadow = true;
+  //add wheels to car 
+  /*
+  car.body.add(car.wheels.rear.left);
+  car.body.add(car.wheels.rear.right);  
+  car.body.add(car.wheels.front.left);
+  car.body.add(car.wheels.front.right);
+  
+  scene.add(car.wheels.rear.left);
+  scene.add(car.wheels.rear.right);
+  scene.add(car.wheels.front.left);
+  scene.add(car.wheels.front.right);
+  
+  //set positions/rotations
+  
+  car.body.position.set(0,5.5,0);
+  
+  car.wheels.rear.left.position.set(-1.1,-.6,-1.1);
+  car.wheels.rear.right.position.set(-1.1,-.6,1.1);
+  car.wheels.front.left.position.set(1.1,-.6,-1.1);
+  car.wheels.front.right.position.set(1.1,-.6,1.1);
+  car.wheels.rear.left.position.y+=5;
+  car.wheels.rear.right.position.y+=5;
+  car.wheels.front.left.position.y+=5;
+  car.wheels.front.right.position.y+=5;
+  
+  car.wheels.rear.left.rotation.x = Math.PI/2;
+  car.wheels.rear.right.rotation.x = Math.PI/2;
+  car.wheels.front.left.rotation.x = Math.PI/2;
+  car.wheels.front.right.rotation.x = Math.PI/2;
+  
+  car.wheels.rear.left.__dirtyPosition = true;
+  car.wheels.rear.right.__dirtyPosition = true;
+  car.wheels.front.left.__dirtyPosition = true;
+  car.wheels.front.right.__dirtyPosition = true;
+  car.wheels.rear.left.__dirtyRotation = true;
+  car.wheels.rear.right.__dirtyRotation = true;
+  car.wheels.front.left.__dirtyRotation = true;
+  car.wheels.front.right.__dirtyRotation = true;
+  
+  
+  car.body.__dirtyPosition = true;
+
+  //set DOF (degree of freedom) constraints
+  // ---- rear left ----
+  car.wheels.rear.leftConstraint = new Physijs.DOFConstraint(
+    car.wheels.rear.left,
+    car.body,
+    new THREE.Vector3(-1.1,-.6,-1)
+  );
+ scene.addConstraint(car.wheels.rear.leftConstraint);
+  car.wheels.rear.leftConstraint.setAngularLowerLimit(new THREE.Vector3(0,0,0));
+  car.wheels.rear.leftConstraint.setAngularUpperLimit(new THREE.Vector3(0,0,0));//no rotation limit for back wheels
+
+  // ---- rear right ----
+  car.wheels.rear.rightConstraint = new Physijs.DOFConstraint(
+    car.wheels.rear.right,
+    car.body,
+    new THREE.Vector3(-1.1,-.6,1)
+  );
+  scene.addConstraint(car.wheels.rear.rightConstraint);
+  car.wheels.rear.rightConstraint.setAngularLowerLimit(new THREE.Vector3(0,0,0));
+  car.wheels.rear.rightConstraint.setAngularUpperLimit(new THREE.Vector3(0,0,0));
+  // ---- front left (we constrain to turn) ----
+  car.wheels.front.leftConstraint = new Physijs.DOFConstraint(
+    car.wheels.front.left,
+    car.body,
+    new THREE.Vector3(1.1,-.6,-1)
+  );
+ scene.addConstraint(car.wheels.front.leftConstraint);
+  car.wheels.front.leftConstraint.setAngularLowerLimit(new THREE.Vector3(0,-Math.PI/8,1));
+  car.wheels.front.leftConstraint.setAngularUpperLimit(new THREE.Vector3(0,Math.PI/8,0));
+  // ---- front right (also constrained) ----
+  car.wheels.front.rightConstraint = new Physijs.DOFConstraint(
+    car.wheels.front.right,
+    car.body,
+    new THREE.Vector3(1.1,-.6,1),
+  );
+  scene.addConstraint(car.wheels.front.rightConstraint);
+  car.wheels.front.rightConstraint.setAngularLowerLimit(new THREE.Vector3(0,-Math.PI/8,1));
+  car.wheels.front.rightConstraint.setAngularUpperLimit(new THREE.Vector3(0,Math.PI/8,0));
+  //end
+  //add
+  */
